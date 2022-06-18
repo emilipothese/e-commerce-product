@@ -1,5 +1,7 @@
 <template>
-  <nav-bar></nav-bar>
+  <section class="container">
+    <nav-bar></nav-bar>
+  </section>
 </template>
 
 <script>
@@ -20,5 +22,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 375px;
+    margin: 0 auto;
+  }
 }
 </style>
