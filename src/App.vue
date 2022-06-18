@@ -1,16 +1,19 @@
 <template>
   <section class="container">
     <nav-bar></nav-bar>
+    <product-view></product-view>
   </section>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
+import ProductView from './components/ProductView.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    ProductView
   }
 }
 </script>
