@@ -12,6 +12,11 @@
       <p class="description__price">$125.00 <span class="description__pourcentage">50%</span></p>
       <p class="description__price--sold">$250</p>
       <div class="cart">
+        <div class="num">
+          <button class="cart__num">-</button>
+          <p class="text__num">0</p>
+          <button class="cart__num">+</button>
+        </div>
         <button class="cart__btn"><img src="../assets/icon-cart.svg" alt=""> Add to cart</button>
       </div>
     </div>
@@ -79,7 +84,11 @@
   .description__price--sold {
     text-decoration: line-through;
     color: hsl(219, 9%, 45%);
-    margin: 5px 0;
+    margin: 5px 0 15px 0;
+  }
+
+  .cart {
+    display: flex;
   }
 
   .cart__btn {
@@ -87,5 +96,37 @@
     border-radius: 7px;
     border: hsl(26, 100%, 55%);
     color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 15px 0;
+    width:60%;
+  }
+
+  .cart__btn img {
+    width: 7%;
+  }
+
+  .num {
+    display: flex;
+    width:40%;
+    margin-right: 10px;
+  }
+
+  .cart__num {
+    background-color: hsl(230, 5%, 95%);
+    border: none;
+    width:30%;
+    font-weight: 700;
+    color: hsl(26, 100%, 55%);
+    font-size: 1.5rem;
+  }
+
+  .text__num {
+    background-color: hsl(230, 5%, 95%);
+    width:40%;
+    padding: 15px 0;
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
   }
 </style>
