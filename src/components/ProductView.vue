@@ -16,7 +16,7 @@
   companion. Featuring a durable rubber outer sole, they'll
   withstand everything the weather can offer.</p>
       <p class="description__price">$125.00 <span class="description__pourcentage">50%</span></p>
-      <p class="description__price--sold">$250</p>
+      <p class="description__price--sold">$250.00</p>
       <div class="cart">
         <div class="num">
           <button class="cart__num">-</button>
@@ -146,5 +146,44 @@
     margin: 0;
     text-align: center;
     font-weight: 700;
+  }
+
+  @media screen and (max-width: 900px) {
+    section {
+      flex-direction: column;
+      margin: 0px;
+    }
+
+    .pictures {
+      width: 100%;
+    }
+
+    .picture--big {
+      border-radius: 0px;
+      object-fit: cover;
+      height: 300px;
+    }
+
+    .thumbnails {
+      display: none;
+    }
+
+    .text {
+      width: 90%;
+      margin-left: 0px;
+    }
+
+    .cart {
+      flex-direction: column;
+    }
+
+    .num {
+      width:100%;
+    }
+
+    .cart__btn {
+      width:100%;
+      margin-top: 20px;
+    }
   }
 </style>

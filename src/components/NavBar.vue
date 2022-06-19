@@ -61,6 +61,10 @@
   }
 
   @media screen and (max-width: 900px) {
+    .menu {
+      border-bottom: 0rem;
+    }
+
     .menu__nav--desktop {
       display: none;
     }
