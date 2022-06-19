@@ -2,6 +2,12 @@
   <section>
     <div class="pictures">
       <img class="picture--big" src="../assets/image-product-1.jpg" alt="">
+      <div class="thumbnails">
+        <img class="picture--small" src="../assets/image-product-1-thumbnail.jpg" alt="">
+        <img class="picture--small" src="../assets/image-product-2-thumbnail.jpg" alt="">
+        <img class="picture--small" src="../assets/image-product-3-thumbnail.jpg" alt="">
+        <img class="picture--small" src="../assets/image-product-4-thumbnail.jpg" alt="">
+      </div>
     </div>
     <div class="text">
       <small>Sneaker Compagny</small>
@@ -27,6 +33,7 @@
 <style scoped>
   section {
     display: flex;
+    align-items: center;
     margin: 50px 20px;
   }
 
@@ -37,11 +44,22 @@
   .text {
     width: 50%;
     text-align: left;
-    margin-left: 20px;
+    margin-left: 70px;
   }
 
   .picture--big {
     width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .thumbnails {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .picture--small {
+    width: 23%;
     border-radius: 10px;
   }
 
