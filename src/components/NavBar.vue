@@ -16,8 +16,8 @@
     </nav>
 
     <div class="menu__profil">
-      <img src="../assets/icon-cart.svg" alt="">
-      <img src="../assets/image-avatar.png" alt="">
+      <a href=""><img src="../assets/icon-cart.svg" alt=""></a>
+      <a href="#"><img src="../assets/image-avatar.png" alt=""></a>
     </div>
   </section>
 </template>
@@ -56,8 +56,16 @@
     justify-content: space-around;
   }
 
-  .menu__profil img:nth-child(2){
+  .menu__profil a:nth-child(2) img{
     width: 40%;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all .3s ease-out;
+  }
+
+  .menu__profil a:nth-child(2) img:hover{
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
   }
 
   @media screen and (max-width: 900px) {

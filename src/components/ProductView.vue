@@ -132,6 +132,7 @@ export default {
   .cart__btn:hover {
     background-color: hsl(220, 13%, 13%);
     cursor: pointer;
+    transition: all .3s ease-out;
   }
 
   .cart__btn img {
@@ -151,6 +152,7 @@ export default {
     font-weight: 700;
     color: hsl(26, 100%, 55%);
     font-size: 1.5rem;
+    transition: all .3s ease-out;
   }
 
   .cart__num:hover {
