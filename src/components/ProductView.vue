@@ -19,9 +19,9 @@
       <p class="description__price--sold">$250.00</p>
       <div class="cart">
         <div class="num">
-          <button class="cart__num">-</button>
-          <p class="text__num">0</p>
-          <button class="cart__num">+</button>
+          <button @click="count--" class="cart__num">-</button>
+          <p class="text__num">{{ count }}</p>
+          <button @click="count++" class="cart__num">+</button>
         </div>
         <button class="cart__btn"><img src="../assets/icon-cart.svg" alt=""> Add to cart</button>
       </div>
@@ -29,6 +29,15 @@
   </section>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      count : 0
+    }
+  },
+}
+</script>
 
 <style scoped>
   section {
@@ -120,6 +129,11 @@
     width:60%;
   }
 
+  .cart__btn:hover {
+    background-color: hsl(220, 13%, 13%);
+    cursor: pointer;
+  }
+
   .cart__btn img {
     width: 7%;
   }
@@ -137,6 +151,11 @@
     font-weight: 700;
     color: hsl(26, 100%, 55%);
     font-size: 1.5rem;
+  }
+
+  .cart__num:hover {
+    background-color: hsl(220, 14%, 75%);
+    cursor: pointer;
   }
 
   .text__num {
