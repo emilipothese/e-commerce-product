@@ -16,7 +16,7 @@
     </nav>
 
     <div class="menu__profil">
-      <a href=""><img src="../assets/icon-cart.svg" alt=""></a>
+      <a href=""><img src="../assets/icon-cart.svg" alt=""><span class="number--small">0</span></a>
       <a href="#"><img src="../assets/image-avatar.png" alt=""></a>
     </div>
   </section>
@@ -56,6 +56,10 @@
     justify-content: space-around;
   }
 
+  .menu__profil a {
+    text-decoration: none;
+  }
+
   .menu__profil a:nth-child(2) img{
     width: 40%;
     border: 2px solid transparent;
@@ -66,6 +70,22 @@
   .menu__profil a:nth-child(2) img:hover{
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
+  }
+
+  .menu__profil a:nth-child(1) {
+    position: relative;
+  }
+
+  .number--small {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 50%;
+    padding: 0px 7px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
   }
 
   @media screen and (max-width: 900px) {
