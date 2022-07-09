@@ -5,19 +5,27 @@
         <div class="modal-container">
           <div class="modal-header">
             <slot name="header">default header</slot>
+            <button
+                class="modal-default-button"
+                @click="$emit('close')"
+              >OK</button>
           </div>
 
           <div class="modal-body">
-            <slot name="body">default body</slot>
+            <slot name="body">
+              <div class="product">
+                <img class="product__image" src="../assets/image-product-1-thumbnail.jpg" alt="">
+                <div>
+                  <p>Fall limited edition...</p>
+                  <p>$125.00</p>
+                </div>
+              </div>
+            </slot>
           </div>
 
           <div class="modal-footer">
             <slot name="footer">
-              default footer
-              <button
-                class="modal-default-button"
-                @click="$emit('close')"
-              >OK</button>
+              <button class="cart__btn">Checkout</button>
             </slot>
           </div>
         </div>
@@ -53,6 +61,7 @@ export default {
 }
 
 .modal-container {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   width: 300px;
   margin: 0px auto;
   padding: 20px 30px;
@@ -62,17 +71,50 @@ export default {
   transition: all 0.3s ease;
 }
 
+.modal-header {
+  display: flex;
+  align-content: space-around;
+}
+
 .modal-header h3 {
   margin-top: 0;
-  color: #42b983;
+  padding-bottom: 5px;
+  color: black;
+  border-bottom: 1px solid hsl(219, 9%, 45%);
+}
+
+.modal-default-button {
+  margin-left: 10px;
 }
 
 .modal-body {
   margin: 20px 0;
 }
 
-.modal-default-button {
-  float: right;
+.product {
+  display: flex;
+}
+
+.product__image {
+  width: 30%;
+  margin-right: 15px;
+}
+
+.cart__btn {
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 7px;
+  border: hsl(26, 100%, 55%);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 15px 0;
+  width:60%;
+}
+
+.cart__btn:hover {
+  background-color: hsl(220, 13%, 13%);
+  cursor: pointer;
+  transition: all .3s ease-out;
 }
 
 /*

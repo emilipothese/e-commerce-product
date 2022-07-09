@@ -25,7 +25,7 @@
     <!-- use the modal component, pass in the prop -->
     <cart-view :show="showCart" @close="showCart = false">
       <template #header>
-        <h3>custom header</h3>
+        <h3>Cart</h3>
       </template>
     </cart-view>
   </Teleport>
