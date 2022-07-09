@@ -13,12 +13,15 @@
 
           <div class="modal-body">
             <slot name="body">
-              <div class="product">
+              <div v-if="product.length" class="product">
                 <img class="product__image" src="../assets/image-product-1-thumbnail.jpg" alt="">
                 <div>
                   <p>Fall limited edition...</p>
                   <p>$125.00</p>
                 </div>
+              </div>
+              <div v-else>
+                <p>Your cart is empty.</p>
               </div>
             </slot>
           </div>
@@ -38,7 +41,19 @@
 export default {
   props: {
     show: Boolean
-  }
+  },
+
+  data() {
+    return {
+      product: {
+        1: {
+          img: "../assets/image-product-1-thumbnail.jpg",
+          title: "Fall limited Edition",
+          price: '$125.00'
+        }
+      }
+    }
+  },
 }
 </script>
 
@@ -140,6 +155,7 @@ export default {
   transform: scale(1.1);
 }
 </style>
+
   <!-- Si il y a quelque chose dans le panier (CartView) -> Affiche le nombre d'items dans le rond orange du cart
       Sinon n'affiche rien
 
