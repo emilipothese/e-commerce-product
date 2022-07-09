@@ -16,12 +16,36 @@
     </nav>
 
     <div class="menu__profil">
-      <a href=""><img src="../assets/icon-cart.svg" alt=""><span class="number--small">0</span></a>
+      <a id="show-cart" @click="showCart = true"><img src="../assets/icon-cart.svg" alt=""><span class="number--small">0</span></a>
       <a href="#"><img src="../assets/image-avatar.png" alt=""></a>
     </div>
   </section>
+
+  <Teleport to="body">
+    <!-- use the modal component, pass in the prop -->
+    <cart-view :show="showCart" @close="showCart = false">
+      <template #header>
+        <h3>custom header</h3>
+      </template>
+    </cart-view>
+  </Teleport>
+
 </template>
 
+<script>
+import CartView from './CartView.vue'
+
+export default {
+  components: {
+    CartView
+  },
+  data() {
+    return {
+      showCart: false
+    }
+  },
+}
+</script>
 
 <style scoped>
   .menu {
